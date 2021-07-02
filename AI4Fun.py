@@ -80,12 +80,21 @@ if st.sidebar.button('RUN'):
            st.write("<font color='red'>Warning: You have either inserted wrong key or exceeded the maximum allowable license usage.</font>", unsafe_allow_html=True)
 
         if r.json().get('output_url'):
-            st.write('Toonified Image')
+            st.write('New Image')
             st.image(r.json()['output_url'])
             st.write('')
             st.write('')
             st.write('Original Image')
             st.image(temp_file.name)
+            
+        if r.json().get('output'):
+           st.write("AI suggested description:")
+           st.write('')
+           st.write(r.json()['output']) 
+           st.write('')
+           st.write('')
+           st.write('Original Image')
+           st.image(temp_file.name)
 
     else:
           st.sidebar.write("<font color='red'>Please upload an image.</font>", unsafe_allow_html=True)
