@@ -90,9 +90,7 @@ if st.sidebar.button('RUN'):
         if r.json().get('output'):
            st.write("AI suggested description:")
            st.write('')
-           st.write('''
-           **r.json()['output']**
-           ''') 
+           st.write(r.json()['output']) 
            st.write('')
            st.write('')
            st.write('Original Image')
