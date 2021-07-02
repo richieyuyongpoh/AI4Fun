@@ -33,7 +33,7 @@ else:
      user_key = st.sidebar.text_input('Insert Key', 'the-key-is-key')
      chosen_key = user_key
 
-st.sidebar.write (f' **Step 2: Choose an application.**')
+st.sidebar.write (f' **Step 2: Choose an application**')
 
 application = st.sidebar.radio(
     "",   
@@ -52,11 +52,16 @@ elif application=='Describe My Picture':
 else:
     deeplearningforfun_config_init = st.secrets ['imagemagnification_config_init']
 
+  
+st.sidebar.write (f' **Step 3: Upload an Image**')
+
 uploaded_file = st.sidebar.file_uploader(
   "Upload an Image",
   type=['png', 'jpg','tiff','jpeg']    )
  
 temp_file = NamedTemporaryFile(delete=False)
+
+st.sidebar.write (f' **Step 4: Click RUN button to call the AI assistant. She will do to rest. **')
 
 if st.sidebar.button('RUN'):
 
