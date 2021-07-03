@@ -37,7 +37,7 @@ st.sidebar.write (f' **Step 2: Choose an application**')
 
 application = st.sidebar.radio(
     "",   
-    ('Toonizing My Face', 'Describe My Picture','Magnifying My Picture'),
+    ('Toonizing My Face', 'Describing My Picture','Magnifying My Picture'),
     index = 0,
     help = 'Note: It is subject to the availability of license usage.Once the license usage has been exceeded, the program will stop executing automatically'
     
@@ -46,7 +46,7 @@ application = st.sidebar.radio(
 if application=='Toonizing My Face':
    deeplearningforfun_config_init = st.secrets ['cartoon_config_init']
    
-elif application=='Describe My Picture':
+elif application=='Describing My Picture':
      deeplearningforfun_config_init = st.secrets ['imagetotext_config_init']
      
 else:
