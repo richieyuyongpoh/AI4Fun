@@ -1,6 +1,5 @@
 import streamlit as st 
-import requests
-from io import StringIO  
+import requests 
 from tempfile import NamedTemporaryFile
  
 st.title('Demo: AI for Fun. ')
